@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	      name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<title>Spotifest | Festival Lineup</title>
+	<link rel="stylesheet" th:href="@{/css/styles.min.css}" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Passion+One&family=Signika:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main>
+	<div class="container">
+
+		<div class="lineup">
+
+			<div class="title">
+				<h1 class="festival_name" th:text="${username} + ' Music Festival'"></h1>
+				<h2>Presented by Spotifest</h2>
+				<h2 class="dates">
+					<span th:text="${month}"></span>&nbsp;
+					<span th:text="${dateOne}"></span>&nbsp;&bull;&nbsp;
+					<span th:text="${dateTwo}"></span>&nbsp;&bull;&nbsp;
+					<span th:text="${dateThree}"></span>,&nbsp;
+					<span th:text="${year}"></span>
+				</h2>
+			</div>
+
+			<div class="day">
+				<h2 th:text="${dayOne}"></h2>
+				<h1 class="headliner" th:text="${artists.get(0).name()}"></h1>
+				<ul class="support direct">
+					<li th:each="index : ${#numbers.sequence(3, 9, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+
+				<ul class="support mid">
+					<li th:each="index : ${#numbers.sequence(12, 27, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+
+				<ul class="support mid">
+					<li th:each="index : ${#numbers.sequence(30, 42, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+
+				<ul class="support mid">
+					<li th:each="index : ${#numbers.sequence(45, 48, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+			</div>
+
+			<div class="day">
+				<h2 th:text="${dayTwo}"></h2>
+				<h1 class="headliner" th:text="${artists.get(1).name()}"></h1>
+				<ul class="support direct">
+					<li th:each="index : ${#numbers.sequence(4, 10, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+
+				<ul class="support mid">
+					<li th:each="index : ${#numbers.sequence(13, 28, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+
+				<ul class="support mid">
+					<li th:each="index : ${#numbers.sequence(31, 43, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+
+				<ul class="support mid">
+					<li th:each="index : ${#numbers.sequence(46, 49, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+			</div>
+
+			<div class="day">
+				<h2 th:text="${dayThree}"></h2>
+				<h1 class="headliner" th:text="${artists.get(2).name()}"></h1>
+				<ul class="support direct">
+					<li th:each="index : ${#numbers.sequence(5, 11, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+
+				<ul class="support mid">
+					<li th:each="index : ${#numbers.sequence(14, 29, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+
+				<ul class="support mid">
+					<li th:each="index : ${#numbers.sequence(32, 44, 3)}" th:text="${artists[__${index}__].name()}"></li>
+				</ul>
+			</div>
+
+			<div class="stage_hosts">
+				<h2>Stage Hosts</h2>
+				<ul class="hosts">
+					<li th:each="index : ${stageHosts}" th:text="${index}"></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+@use "../base/typography" as font;
+
+.container .lineup {
+	color: #FFF;
+	align-content: center;
+	aspect-ratio: 0.925926 / 1;
+	background: linear-gradient(to bottom, #21295c, #1c7293);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-transform: uppercase;
+	padding: 1.5rem;
+}
+
+@for $i from 1 through 6 {
+	.lineup h#{$i} {
+		text-align: center;
+	}
+}
+
+.lineup h2 {
+	font-size: 1rem;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.lineup .title {
+
+}
+
+.lineup .title .festival_name {
+	font-family: "Passion One", sans-serif;
+	font-size: 3rem;
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 2px;
+}
+
+.lineup .title h2 {
+	font-family: "Concert One", sans-serif;
+	font-weight: 400;
+}
+
+.lineup .title .dates {
+	color: #9eb3c2;
+}
+
+.lineup .day h2 {
+	font-family: "Concert One", sans-serif;
+	font-weight: 400;
+	margin-top: 2rem;
+	font-size: 1.125rem;
+	color: #9eb3c2;
+}
+
+.lineup .day .headliner {
+	font-family: "Passion One", sans-serif;
+	font-size: 2.5rem;
+	font-weight: 400;
+	margin: 0;
+}
+
+
+.lineup .day ul,
+.lineup .stage_hosts .hosts {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.lineup .day ul li,
+.lineup .stage_hosts li {
+	display: inline-block;
+	padding: 0;
+	margin: 0 0.5rem;
+}
+
+.lineup .day .support {
+	font-family: "Signika", sans-serif;
+}
+
+.lineup .day .direct {
+	font-family: "Passion One", sans-serif;
+	font-size: 2rem;
+}
+
+.lineup .day .mid {
+	font-size: 1.125rem;
+}
+
+.lineup .stage_hosts {
+	margin-top: 3rem;
+}
+
+.lineup .stage_hosts h2 {
+	font-family: "Concert One", sans-serif;
+	font-weight: 400;
+	font-size: 1.5rem;
+	color: #9eb3c2;
+}
+
+.lineup .stage_hosts .hosts li {
+	font-family: "Signika", sans-serif;
+	font-size: 1.5rem;
+}
