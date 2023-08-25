@@ -205,7 +205,7 @@ template {
   flex-direction: column;
   justify-content: center;
   text-transform: uppercase;
-  padding: 1.5rem;
+  padding: 0 2rem;
 }
 
 .lineup h1 {
@@ -269,6 +269,7 @@ template {
   font-size: 2.5rem;
   font-weight: 400;
   margin: 0;
+  padding: 0;
 }
 
 .lineup .day ul,
@@ -315,6 +316,21 @@ template {
 .lineup .stage_hosts .hosts li {
   font-family: "Signika", sans-serif;
   font-size: 1.5rem;
+}
+
+.lineup .credit {
+  width: 100%;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.lineup .credit img {
+  text-align: center;
+  max-width: 100px;
+  height: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
